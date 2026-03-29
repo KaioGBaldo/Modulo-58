@@ -1,10 +1,10 @@
 from django.db import models
 
-class Produto(models.Model):
-    nome = models.CharField(max_length=100)
-    descricao = models.TextField()
-    preco = models.DecimalField(max_digits=10, decimal_places=2)
-    criado_em = models.DateTimeField(auto_now_add=True)
+class Product(models.Model):
+    title = models.CharField(max_length=200)
+    description = models.TextField()
+    price = models.DecimalField(max_digits=10, decimal_places=2)
+    active = models.BooleanField(default=True)
 
     def __str__(self):
-        return self.nome
+        return self.title
